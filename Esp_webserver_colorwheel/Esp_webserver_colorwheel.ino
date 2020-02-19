@@ -2,8 +2,8 @@
 #include <ESP8266WiFi.h>
 
 // Replace with your network credentials
-const char* ssid     = "REPLACE_WITH_YOUR_SSID";
-const char* password = "REPLACE_WITH_YOUR_PASSWORD";
+const char* ssid     = "Dollard_2.4GHz";
+const char* password = "ik54j3s94rgq";
 
 // Set web server port number to 80
 WiFiServer server(80);
@@ -29,6 +29,9 @@ const long timeoutTime = 2000;
 
 void setup() {
   Serial.begin(115200);
+
+  pinMode(BUILTIN_LED, OUTPUT);
+  digitalWrite(BUILTIN_LED, HIGH);
   
   // Connect to Wi-Fi network with SSID and password
   Serial.print("Connecting to ");
@@ -39,6 +42,7 @@ void setup() {
     Serial.print(".");
   }
   // Print local IP address and start web server
+  digitalWrite(BUILTIN_LED, LOW);
   Serial.println("");
   Serial.println("WiFi connected.");
   Serial.println("IP address: ");
@@ -116,4 +120,6 @@ void loop(){
     Serial.println("Client disconnected.");
     Serial.println("");
   }
+  
+  
 }
