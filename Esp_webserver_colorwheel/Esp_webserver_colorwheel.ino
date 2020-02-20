@@ -16,7 +16,7 @@ const char* ssid     = "Dollard_2.4GHz";
 const char* password = "ik54j3s94rgq";
 
 // Set web server port number to 80
-WiFiServer server(80);
+WiFiServer server(60);
 
 // Decode HTTP GET value
 String reactString = "0";
@@ -159,8 +159,4 @@ void loop() {
     leds[i] = CHSV(hue, saturation, value);
   }
   FastLED.show();
-
-  Serial.print("SR: ");
-  Serial.println(soundReactive);
-
 }
