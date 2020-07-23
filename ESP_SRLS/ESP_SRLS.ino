@@ -3,7 +3,7 @@
 #define FASTLED_ESP8266_RAW_PIN_ORDER
 #include <FastLED.h>
 
-#define NUM_LEDS 26
+#define NUM_LEDS 300
 
 #define DATA_PIN D2
 
